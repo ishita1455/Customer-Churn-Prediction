@@ -1,0 +1,45 @@
+============================================================
+CUSTOMER CHURN MODEL METADATA
+(Anti-Overfitting Version)
+============================================================
+
+Training Date: 2025-10-30 13:43:11.642455
+
+Dataset Shape: (250000, 12)
+Features: ['Product Category', 'Product Price', 'Quantity', 'Total Purchase Amount', 'Payment Method', 'Customer Age', 'Returns', 'Gender', 'purchase_year', 'purchase_month', 'purchase_day']
+
+Train Set Performance:
+  Accuracy : 0.6768
+  F1 Score : 0.6049
+  Recall   : 0.6009
+
+Test Set Performance:
+  Accuracy : 0.6348
+  Precision: 0.2052
+  Recall   : 0.2858
+  F1 Score : 0.2389
+  ROC-AUC  : 0.5042
+
+Overfitting Metrics:
+  Accuracy gap: 0.0420
+  F1 Score gap: 0.3660
+
+Best Hyperparameters:
+  n_estimators: 150
+  max_depth: 12
+  min_samples_split: 24
+  min_samples_leaf: 5
+  max_features: sqrt
+  max_samples: 0.6637017332034828
+
+Top 10 Important Features:
+  Quantity: 0.5138
+  Customer Age: 0.1276
+  Product Price: 0.0848
+  Total Purchase Amount: 0.0738
+  Gender: 0.0490
+  purchase_day: 0.0437
+  purchase_month: 0.0309
+  Product Category: 0.0276
+  Payment Method: 0.0263
+  purchase_year: 0.0226
