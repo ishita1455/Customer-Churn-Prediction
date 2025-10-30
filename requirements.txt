@@ -1,0 +1,17 @@
+# Streamlit UI
+streamlit==1.39.0
+
+# Core Data Science Libraries
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.1
+imbalanced-learn==0.12.2
+
+# Optimization & Visualization
+optuna==3.6.1
+matplotlib==3.9.1
+seaborn==0.13.2
+
+# Model Saving & Utilities
+joblib==1.4.2
+pathlib==1.0.1
