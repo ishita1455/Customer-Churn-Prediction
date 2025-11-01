@@ -238,7 +238,7 @@ if st.button("🔮 Predict Churn Risk", use_container_width=True, type="primary"
     no_churn_prob = prediction_proba[0] * 100
     
     # Determine risk level
-    if churn_prob >= 60:
+    if churn_prob >= 45:
         risk_level = "HIGH RISK"
         risk_class = "result-high"
         emoji = "🔴"
@@ -256,20 +256,11 @@ if st.button("🔮 Predict Churn Risk", use_container_width=True, type="primary"
     st.markdown("---")
     st.markdown(f"""
         <div class="{risk_class}">
-            <h2>{emoji} {risk_level}</h2>
-            <h1 style="font-size: 3rem; margin: 1rem 0;">{churn_prob:.1f}%</h1>
+            <h1>{emoji} {risk_level}</h1>
             <p style="font-size: 1.2rem;">{message}</p>
         </div>
     """, unsafe_allow_html=True)
-    
-    # Show details
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.metric("Will Churn", f"{churn_prob:.1f}%", delta=f"{churn_prob-50:.1f}%")
-    
-    with col2:
-        st.metric("Will Stay", f"{no_churn_prob:.1f}%", delta=f"{no_churn_prob-50:.1f}%")
+
     
     # Show recommendation
     st.markdown(f"""
